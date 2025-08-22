@@ -1,6 +1,8 @@
 import { useEffect } from "react"
 import { useState } from "react"
 
+import bgImage from "../assets/bedroom.gif"
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 
@@ -27,7 +29,7 @@ export const Counter = () => {
     <div id="main-grid">
       <span className="time-display ph">00:00:00</span>
       <span className="time-display">{timeDisplay}</span>
-      <img src="./src/assets/bedroom.gif" id="main-bg"></img>
+      <img src={bgImage} id="main-bg"></img>
     </div>
   )
 }
