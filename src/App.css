@@ -1,0 +1,24 @@
+#main-grid{
+  display: grid;
+  justify-content: center;
+}
+
+.time-display,
+#main-grid img {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.time-display {
+  font-family: 'LCD14';
+  color: #bb2222;
+  font-weight: 800;
+  font-size: 30px;
+  position: relative;
+  left: 1028px;
+  top: 253px;
+}
+
+.ph {
+  color: #1a1a1a;
+}

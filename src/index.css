@@ -1,0 +1,16 @@
+@font-face {
+  font-family: 'LCD14';
+  src: local('LCD14'), url('./assets/fonts/LCD14.otf')
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: #121212;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
