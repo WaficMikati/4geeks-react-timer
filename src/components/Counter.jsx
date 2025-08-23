@@ -27,9 +27,15 @@ export const Counter = () => {
 
   return (
     <div id="main-grid">
+      <img src={bgImage} id="main-bg"></img>
       <span className="time-display ph">00:00:00</span>
       <span className="time-display">{timeDisplay}</span>
-      <img src={bgImage} id="main-bg"></img>
+      <div id="btn-row">
+        <div class="btn"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+      </div>
     </div>
   )
 }
