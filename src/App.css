@@ -20,10 +20,6 @@
   top: 275px;
 }
 
-.ph {
-  color: #1a1a1a;
-}
-
 .time-display {
   font-family: 'LCD7';
   color: hsl(345, 80%, 60%);
@@ -31,6 +27,10 @@
   position: relative;
   left: 1030px;
   top: 244px;
+}
+
+.ph {
+  color: #1a1a1a;
 }
 
 .btn {
