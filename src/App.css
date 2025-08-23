@@ -10,13 +10,12 @@
 }
 
 .time-display {
-  font-family: 'LCD14';
-  color: #bb2222;
-  font-weight: 800;
-  font-size: 30px;
+  font-family: 'LCD7';
+  color: hsl(345, 80%, 60%);
+  font-size: 25px;
   position: relative;
-  left: 1028px;
-  top: 253px;
+  left: 1030px;
+  top: 244px;
 }
 
 .ph {
