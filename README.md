@@ -2,4 +2,4 @@
 
 [See it live](https://pixel-timer.vercel.app/)
 
-![Preview](preview.png)
+![Preview](src/assets/images/preview.png)
