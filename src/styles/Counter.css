@@ -1,0 +1,10 @@
+#main-grid{
+  display: grid;
+  justify-content: center;
+}
+
+#main-grid img {
+  grid-column: 1;
+  grid-row: 1;
+}
+

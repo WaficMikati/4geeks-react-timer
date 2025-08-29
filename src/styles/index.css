@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'LCD7';
+  src: local('LCD7'), url('../assets/fonts/LCD7.otf') format('opentype');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'LCD7';
+}
+
+html {
+  background: #121212;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  user-select: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(1.5);
+}

@@ -1,0 +1,14 @@
+.timer-display {
+  grid-column: 1;
+  grid-row: 1;
+  color: hsl(345, 80%, 60%);
+  font-size: 25px;
+  position: relative;
+  left: 1030px;
+  top: 244px;
+}
+
+.timer-bg {
+  color: #1a1a1a;
+}
+

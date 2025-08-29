@@ -1,0 +1,79 @@
+#modal {
+  grid-column: 1;
+  grid-row: 1;
+  background: #000000aa;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+}
+
+#console {
+  background-image: url('../assets/images/console.png');
+  background-repeat: no-repeat;
+  width: 491px;
+  height: 755px;
+  display: grid;
+  justify-content: center;
+}
+
+#time-display {
+  text-align: center;
+  color: #eb4770;
+  align-self: end;
+  transform: translate(6px, 6px);
+  font-size: 60px;
+}
+
+#numpad {
+  align-self: center;
+  transform: translate(5px, 10px);
+  width: min-content;
+  height: min-content;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+
+#numpad :first-child {
+  padding-right: 24px;
+}
+
+.btn-numpad {
+  background: url('../assets/images/button-big.png');
+  width: 140px;
+  height: 105px;
+  border: none;
+  font-size: 56px;
+  color: #889ecc;
+  display: grid;
+  align-items: center;
+  text-align: center;
+  padding: 12px 0 0 14px;
+}
+
+.btn-numpad:active {
+  background: url('../assets/images/button-big-pressed.png');
+  padding: 18px 2px 0 0;
+}
+
+#btn-submit {
+  background: url('../assets/images/bigbig-button.png');
+  align-self: center;
+  transform: translate(5px, -18px);
+  width: 420px;
+  height: 105px;
+  border: none;
+  color: #889ecc;
+  font-size: 56px;
+  word-spacing: -24px;
+  padding: 11px 0 0 10px;
+}
+
+#btn-submit:active {
+  background-image: url('../assets/images/bigbig-button-pressed.png');
+  background-repeat: no-repeat;
+  padding: 18px 2px 0 0;
+}

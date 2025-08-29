@@ -1,48 +1,33 @@
-import { useEffect } from "react"
-import { useState } from "react"
-
-import bgImage from "../assets/bedroom.gif"
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { library } from '@fortawesome/fontawesome-svg-core'
-
-import { fas } from '@fortawesome/free-solid-svg-icons'
-import { far } from '@fortawesome/free-regular-svg-icons'
-import { fab } from '@fortawesome/free-brands-svg-icons'
-
-library.add(fas, far, fab)
+import '../styles/Counter.css'
+import bgImage from "../assets/images/bg.gif"
+import { useState } from 'react'
+import { useTimer } from '../hooks/userTimer.jsx'
+import { Buttons } from './Buttons.jsx'
+import { TimerDisplay } from './TimerDisplay.jsx'
+import { Modal } from './Modal.jsx'
 
 export const Counter = () => {
-  let [timeDisplay, setTimeDisplay] = useState(secToTime(0))
-  let elapsed = 0
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      elapsed++
-      setTimeDisplay(secToTime(elapsed))
-    }, 1000)
-
-    return () => clearInterval(interval)
-  }, [])
+  const { timeDisplay, pause, stopTimer, reset, setCountdown, isPaused } = useTimer()
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
   return (
     <div id="main-grid">
-      <img src={bgImage} id="main-bg"></img>
-      <span className="time-display ph">00:00:00</span>
-      <span className="time-display">{timeDisplay}</span>
-      <div id="btn-row">
-        <div class="btn"></div>
-        <div class="btn"></div>
-        <div class="btn"></div>
-        <div class="btn"></div>
-      </div>
+      <img src={bgImage} id="main-bg" />
+      <TimerDisplay time={timeDisplay}/>
+      <Buttons
+        onOpenModal={() => setIsModalOpen(true)}
+        onPause={pause}
+        onStop={stopTimer}
+        onReset={reset}
+        isPaused={isPaused}
+      />
+      <Modal
+        isOpen={isModalOpen}
+        setIsOpen={setIsModalOpen}
+        onClose={() => setIsModalOpen(false)} 
+        onSubmit={setCountdown} 
+      />
     </div>
   )
 }
 
-const secToTime = sec => {
-  const hour = Math.trunc(sec / 3600)
-  const minute = Math.trunc((sec % 3600) / 60)
-  const second = Math.trunc(sec % 60)
-  return `${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}:${second.toString().padStart(2, '0')}`
-}

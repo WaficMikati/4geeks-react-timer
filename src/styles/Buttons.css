@@ -1,0 +1,29 @@
+#btn-row {
+  grid-column: 1;
+  grid-row: 1;
+  position: relative;
+  top: 275px;
+  left: 1017px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3px;
+  width: min-content;
+  height: min-content;
+}
+
+.btn {
+  background-color: transparent;
+  background-image: url('../assets/images/button.png');
+  background-repeat: no-repeat;
+  width: 39px;
+  height: 27px;
+  color: #889ecc;
+  text-align: center;
+  padding-left: 4px;
+  border: none;
+}
+
+.btn:active {
+  background-image: url('../assets/images/button-pressed.png');
+  padding: 4px 4px 0 3px
+}
